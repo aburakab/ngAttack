@@ -1,0 +1,32 @@
+
+<div class="page contentwrapper">
+    <router-outlet></router-outlet>
+</div>
+<header>
+    <div class="page logowrapper">
+        <h1 class="sitelogo"><a [routerLink]="['Home']" title="SiteTitle">ISHEE</a></h1>
+    </div>
+    <div class="page navwrapper">
+        <nav class="main">
+            <ul>
+                <li> <a [routerLink]="['Page']">Page</a></li>
+                
+            </ul>
+        </nav>
+        <nav class="tools">
+            <ul>
+                <li><a>Logout</a></li> 
+                <li><a>My profile</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<footer>
+    <div class="page footerwrapper">
+        <ul>
+            <li>copyrights ISHEE Team</li>
+
+        </ul>
+    </div>
+</footer>
+<div class="purple">here we go</div>

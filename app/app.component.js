@@ -9,13 +9,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_deprecated_1 = require('@angular/router-deprecated');
+var core_2 = require('./core');
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
+        router_deprecated_1.RouteConfig([
+            {
+                path: '/page',
+                name: 'Page',
+                component: core_2.PageComponent
+            },
+            {
+                path: '/home',
+                name: 'Home',
+                component: core_2.HomeComponent,
+                useAsDefault: true
+            }
+        ]),
         core_1.Component({
             selector: 'my-app',
-            template: '<h1>My First Angular 2 App</h1>'
+            templateUrl: 'views/app.html',
+            directives: [router_deprecated_1.ROUTER_DIRECTIVES],
+            providers: [router_deprecated_1.ROUTER_PROVIDERS]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
